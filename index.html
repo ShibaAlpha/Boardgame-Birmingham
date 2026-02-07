@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brass: Birmingham 伯明翰</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>🎲 Brass: Birmingham 伯明翰</h1>
+            <div id="game-info">
+                <span id="current-era">时代: 运河时代</span>
+                <span id="current-round">回合: 1</span>
+                <span id="current-player">玩家: P1</span>
+            </div>
+        </header>
+
+        <main>
+            <div id="board-container">
+                <svg id="game-board" viewBox="0 0 1000 700"></svg>
+            </div>
+
+            <aside id="sidebar">
+                <div id="players-panel">
+                    <h3>👥 玩家</h3>
+                    <div id="players-list"></div>
+                </div>
+
+                <div id="actions-panel">
+                    <h3>🔧 行动</h3>
+                    <div id="actions-list">
+                        <button class="action-btn" data-action="build">🏭 建造</button>
+                        <button class="action-btn" data-action="link">🚂 链接</button>
+                        <button class="action-btn" data-action="develop">⚡ 开发</button>
+                        <button class="action-btn" data-action="sell">💰 销售</button>
+                        <button class="action-btn" data-action="loan">💳 贷款</button>
+                        <button class="action-btn" data-action="scout">🔍 侦察</button>
+                    </div>
+                </div>
+
+                <div id="resources-panel">
+                    <h3>📦 资源</h3>
+                    <div id="resources-display">
+                        <div class="resource">💰 金钱: <span id="money-display">0</span></div>
+                        <div class="resource">⚫ coal: <span id="coal-display">0</span></div>
+                        <div class="resource">🔩 iron: <span id="iron-display">0</span></div>
+                        <div class="resource">🍺 beer: <span id="beer-display">0</span></div>
+                    </div>
+                </div>
+
+                <div id="hand-panel">
+                    <h3>🎴 手牌</h3>
+                    <div id="cards-display"></div>
+                </div>
+            </aside>
+        </main>
+
+        <div id="modal" class="hidden">
+            <div id="modal-content">
+                <h2 id="modal-title">标题</h2>
+                <div id="modal-body"></div>
+                <div id="modal-actions"></div>
+                <button id="modal-close">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/map-data.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
